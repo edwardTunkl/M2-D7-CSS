@@ -20,13 +20,13 @@
             
             
             
-            EX4) Write a selector to target the first blogpost
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
+            
+            
+            
+            
+            
+            
+            
         */
 
 
@@ -87,7 +87,35 @@
         
         background-color: blue;
       }
-      /* EX4 */
+      /* EX4) Write a selector to target the first blogpost */
+      .blog-post:first-of-type{
+        color: rgb(7, 133, 133);
+      }
+      /* EX5) Write a selector to target the "even" links in the navbar */
+      .nav > a:nth-child(2n){
+        background-color: brown;
+      }
+      /* EX6) Write a selector to target the last blog post */
+      .blog-post:last-of-type {
+        color: rgb(143, 127, 108);
+      }
+      /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
+      aside div ol li {
+        
+        background-color: rgb(224, 199, 247);
+      }
+      /* EX8) Write a selector to target the second post author */
+      meta[content="Jacob Thornton"] {
+        color: aqua;
+      }
+      /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
+      footer p a[href="#"] {
+        color: brown;
+      }
+      /* EX10) Write a selector to target the footer */
+      footer {
+        background-color: antiquewhite;
+      }
 
 
     </style>
@@ -462,12 +490,28 @@
     </footer>
 
     <script>
-      /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to change the color of the main title
-        EX13) Write a function to change the background of the jumbotron
-        EX14) Write a function to remove all the links under "Elsewhere"
+     
+        // JS Exercises
+        // EX11) Write a function to add a new link into the navbar
+      
+
+
+
+
+
+
+
+
+        // EX12) Write a function to change the color of the main title
+
+
+
+        // EX13) Write a function to change the background of the jumbotron
+
+
+        // EX14) Write a function to remove all the links under "Elsewhere"
+
+
         EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
