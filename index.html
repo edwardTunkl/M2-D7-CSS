@@ -73,7 +73,8 @@
           font-size: 3.5rem;
         }
       }
- 
+
+          
       /* EX1) Write a selector to target the h1 in jumbotron*/
       .jumbotron .display-4 {
         color: aqua;
@@ -493,6 +494,7 @@
      
         // JS Exercises
         // EX11) Write a function to add a new link into the navbar
+
         function newLink(string){
           let navBar = document.querySelector("nav")
           let newLink = document.createElement("a")
@@ -500,15 +502,25 @@
           navBar.appendChild(newLink)
         }
         // EX12) Write a function to change the color of the main title
+
         function mainTitle (str){
           let mainTitle = document.querySelector("title")
           mainTitle.innerHTML = str
         }
        // EX13) Write a function to change the background of the jumbotron
 
+          // function backGround (str) {
+          //   let newbackGround = document.querySelector(".jumbotron")
+          //   newbackGround.style.background-color = str
+          //   console.log(newbackGround)
+          // }
 
         // EX14) Write a function to remove all the links under "Elsewhere"
 
+          function removeElse () {
+            let removeE = document.querySelector("aside div:last-child ol")
+            removeE.remove()
+          }
 
     //     EX15) Write a function to change the column size for heading in jumbotron
     //     EX16) Write a function to remove the "Search" magnifying glass icon
