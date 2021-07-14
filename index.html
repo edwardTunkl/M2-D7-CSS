@@ -491,15 +491,17 @@
 
         function mainTitle (str){
           let mainTitle = document.querySelector("title")
-          mainTitle.innerHTML = str
+          mainTitle.style.color = "str"
         }
        // EX13) Write a function to change the background of the jumbotron
 
-        function backGround (str) {
-         let newbackGround = document.querySelector(".jumbotron")
-             newbackGround.style.background-color = str
-             console.log(newbackGround)
-           }
+         function backGround () {
+          let newbackGround = document.querySelector(".jumbotron")
+              newbackGround.classList.remove("bg-dark")
+              newbackGround.classList.add("bg-light")
+
+              // console.log(newbackGround)
+            }
 
         // EX14) Write a function to remove all the links under "Elsewhere"
 
@@ -508,12 +510,13 @@
             removeE.remove()
           }
 
-    //     EX15) Write a function to change the column size for heading in jumbotron
+        // EX15) Write a function to change the column size for heading in jumbotron
 
-          function columSize () {
-            let column = document.querySelector(".jumbotron .col-md-6")
-            column.columnWidth = "10px"
-          }
+           function columSize () {
+             let column = document.querySelector(".jumbotron .col-md-6")
+             column.classList.remove("col-md-6")
+             cloumn.classList.add("col-12")
+           }
 
 
     //     EX16) Write a function to remove the "Search" magnifying glass icon
@@ -527,15 +530,15 @@
 
     //     EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
 
-          function trimPara () {
-            let paras = document.querySelectorAll (".blog-post p:nth-child(3)")
-            console.log(paras)
+           function trimPara () {
+             let paras = document.querySelectorAll (".blog-post p:nth-child(3)")
+             console.log(paras)
 
-            for (let i=0; i<paras.length;i++){
-
-              paras[i].slice(0,50)
-            }
- }
+             for (let i=0; i<paras.length;i++){
+                let text = paras
+               paras[i].slice(0,50)
+             }
+  }
 
     //     EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
     //     EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
