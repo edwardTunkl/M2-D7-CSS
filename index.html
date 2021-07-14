@@ -60,10 +60,7 @@
         }
       }
 
-      .jumbotron {
-        background-color: rgb(22, 135, 233);
-      
-      }    
+        
       /* EX1) Write a selector to target the h1 in jumbotron*/
       .jumbotron .display-4 {
         color: aqua;
@@ -90,17 +87,17 @@
         color: rgb(143, 127, 108);
       }
       /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
-      aside div ol li {
+      aside div:nth-child(2) ol{
         
-        background-color: rgb(224, 199, 247);
+        background-color: rgb(216, 22, 22);
       }
       /* EX8) Write a selector to target the second post author */
-      meta[content="Jacob Thornton"] {
-        color: aqua;
+     .blog-post:nth-child(3) p:nth-child(2) a[href="#"] {
+        color: rgb(255, 0, 157);
       }
       /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
       footer p a[href="#"] {
-        color: brown;
+        color: rgb(252, 9, 143);
       }
       /* EX10) Write a selector to target the footer */
       footer {
@@ -498,11 +495,11 @@
         }
        // EX13) Write a function to change the background of the jumbotron
 
-          // function backGround (str) {
-          //   let newbackGround = document.querySelector(".jumbotron")
-          //   newbackGround.style.background-color = str
-          //   console.log(newbackGround)
-          // }
+        function backGround (str) {
+         let newbackGround = document.querySelector(".jumbotron")
+             newbackGround.style.background-color = str
+             console.log(newbackGround)
+           }
 
         // EX14) Write a function to remove all the links under "Elsewhere"
 
@@ -530,7 +527,16 @@
 
     //     EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
 
-    
+          function trimPara () {
+            let paras = document.querySelectorAll (".blog-post p:nth-child(3)")
+            console.log(paras)
+
+            for (let i=0; i<paras.length;i++){
+
+              paras[i].slice(0,50)
+            }
+ }
+
     //     EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
     //     EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
     //     EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
